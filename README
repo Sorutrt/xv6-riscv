@@ -46,3 +46,19 @@ You will need a RISC-V "newlib" tool chain from
 https://github.com/riscv/riscv-gnu-toolchain, and qemu compiled for
 riscv64-softmmu.  Once they are installed, and in your shell
 search path, you can run "make qemu".
+
+If you use Nix, this repository also provides a dev shell:
+
+    nix develop
+
+Inside the shell:
+
+    make qemu
+
+To debug with GDB:
+
+    make qemu-gdb
+
+and in another terminal:
+
+    nix develop --command xv6-gdb
